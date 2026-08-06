@@ -56,7 +56,7 @@ noms = \lyricmode {
 }
 
 \header {
-  title = \markup { \fontsize #4 "Cada Dia el Dematí" }
+  title = \markup { \fontsize #4 "Cada Dia Al Dematí" }
   tagline = ##f
 }
 

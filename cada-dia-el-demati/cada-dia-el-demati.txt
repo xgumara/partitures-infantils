@@ -1,5 +1,5 @@
-# Cada dia el dematí
-title = Cada Dia el Dematí
+# Cada dia al dematí
+title = Cada Dia Al Dematí
 time = 2/4
 partial = 4
 magnify = 1.8
