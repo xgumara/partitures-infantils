@@ -19,8 +19,8 @@ a partir de la carpeta `songs/`.
 │       ├── cançó.ly       # partitura LilyPond (generada)
 │       └── cançó.pdf      # PDF per imprimir (generat)
 ├── tools/
-│   └── generate.py        # genera les partitures i l'índex web
-├── .github/workflows/     # publica la web automàticament
+│   ├── generate.py        # genera les partitures i l'índex web
+│   └── publish.sh         # publica la web a GitHub Pages
 ├── README.md
 └── TODO.md                # cançons pendents (ignorat per git)
 ```
@@ -64,14 +64,20 @@ a partir de la carpeta `songs/`.
 
 ## Publicar a GitHub Pages
 
-Com que la web viu a `songs/`, la publicació es fa amb un workflow de
-GitHub Actions (ja preparat a `.github/workflows/pages.yml`):
+La web es publica des de la branca `gh-pages` (sense necessitat de GitHub Actions).
+Per actualitzar-la, des de la carpeta del projecte:
 
-1. Crea un repositori a GitHub i puja-hi tota aquesta carpeta.
-2. A **Settings → Pages → Build and deployment**, canvia el *Source* a
-   **GitHub Actions** (això ja està configurat al workflow, només cal activar-ho).
-3. Fes *push* a `main`: el workflow publica la web automàticament a
-   `https://<usuari>.github.io/<repositori>/`.
+```
+./tools/publish.sh
+```
+
+Aquest script genera les partitures, guarda els canvis a `main` i puja la web a
+la branca `gh-pages`. La primera vegada (o si canvies de configuració), revisa a
+GitHub:
+
+1. A **Settings → Pages → Build and deployment**, tria *Deploy from a branch*.
+2. Selecciona la branca **gh-pages** i la carpeta **/ (root)**.
+3. La web queda publicada a `https://<usuari>.github.io/<repositori>/`.
 4. Per fer servir un domini propi: afegeix un fitxer `CNAME` amb el domini dins
-   de `songs/` i crea un registre CNAME al teu proveïdor de domini que
-   apunti a `<usuari>.github.io`.
+   de `songs/` (el publicarà `publish.sh`) i crea un registre CNAME al teu
+   proveïdor de domini que apunti a `<usuari>.github.io`.
