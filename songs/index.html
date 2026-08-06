@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partitures</title>
+  <style>
+    :root { --bg:#f7f7f5; --ink:#222; --accent:#d2483e; --muted:#666; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+           background:var(--bg); color:var(--ink); }
+    header { padding:3rem 1.5rem 1rem; text-align:center; }
+    header h1 { margin:0; font-size:2.2rem; }
+    header p { color:var(--muted); }
+    main { max-width:860px; margin:0 auto; padding:1.5rem; display:grid;
+           grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
+    .score { background:#fff; border:1px solid #e3e1dc; border-radius:10px; padding:1.25rem; }
+    .score h2 { margin:0 0 1rem; font-size:1.1rem; }
+    .links { display:flex; gap:.5rem; flex-wrap:wrap; }
+    .btn { text-decoration:none; padding:.55rem .9rem; border-radius:8px;
+           font-size:.9rem; border:1px solid #d8d5cf; color:var(--ink); }
+    .btn:hover { border-color:#b3afa7; }
+    .btn.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .btn.primary:hover { opacity:.9; }
+    footer { text-align:center; color:var(--muted); padding:2rem 1rem; font-size:.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Partitures</h1>
+    <p>Cançons infantils amb notes acolorides per a aprendre a tocar-les</p>
+  </header>
+  <main>
+      <article class="score">
+        <h2>Cada Dia El Demati</h2>
+        <div class="links">
+          <a class="btn primary" href="cada-dia-el-demati/cada-dia-el-demati.pdf" download>Baixa el PDF</a>
+          <a class="btn" href="cada-dia-el-demati/cada-dia-el-demati.ly" download>Codi font (.ly)</a>
+          <a class="btn" href="cada-dia-el-demati/cada-dia-el-demati.txt" download>Font senzilla (.txt)</a>
+        </div>
+      </article>
+      <article class="score">
+        <h2>Gegant Del Pi</h2>
+        <div class="links">
+          <a class="btn primary" href="gegant-del-pi/gegant-del-pi.pdf" download>Baixa el PDF</a>
+          <a class="btn" href="gegant-del-pi/gegant-del-pi.ly" download>Codi font (.ly)</a>
+          <a class="btn" href="gegant-del-pi/gegant-del-pi.txt" download>Font senzilla (.txt)</a>
+        </div>
+      </article>
+      <article class="score">
+        <h2>La Pastoreta</h2>
+        <div class="links">
+          <a class="btn primary" href="la-pastoreta/la-pastoreta.pdf" download>Baixa el PDF</a>
+          <a class="btn" href="la-pastoreta/la-pastoreta.ly" download>Codi font (.ly)</a>
+          <a class="btn" href="la-pastoreta/la-pastoreta.txt" download>Font senzilla (.txt)</a>
+        </div>
+      </article>
+      <article class="score">
+        <h2>Oh Susanna</h2>
+        <div class="links">
+          <a class="btn primary" href="oh-susanna/oh-susanna.pdf" download>Baixa el PDF</a>
+          <a class="btn" href="oh-susanna/oh-susanna.ly" download>Codi font (.ly)</a>
+          <a class="btn" href="oh-susanna/oh-susanna.txt" download>Font senzilla (.txt)</a>
+        </div>
+      </article>
+  </main>
+  <footer>Fet amb LilyPond</footer>
+</body>
+</html>
