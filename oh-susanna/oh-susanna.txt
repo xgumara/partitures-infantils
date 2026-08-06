@@ -1,0 +1,30 @@
+# Oh! Susanna
+title = Oh! Susanna
+time = 4/4
+partial = 4
+magnify = 1.8
+spacing = 1.3
+system-distance = 40
+system-distance-min = 32
+lyric-padding = 2
+lyric-distance = 14
+lyric-distance-min = 11
+
+melodia:
+c'8 d'8 |
+e'4 g'4 g'4. a'8 |
+g'4 e'4 c'4. d'8 |
+e'4 e'4 d'4 c'4 |
+d'2. c'8 d'8 |
+e'4 g'4 g'4. a'8 |
+g'4 e'4 c'4. d'8 |
+e'4 e'4 d'4 d'4 |
+c'1 |
+f'2 f'2 |
+a'4 a'2 a'4 |
+g'4 g'4 e'4 c'4 |
+d'2. c'8 d'8 |
+e'4 g'4 g'4. a'8 |
+g'4 e'4 c'4. d'8 |
+e'4 e'4 d'4 d'4 |
+c'1 \bar "|."

@@ -1,0 +1,16 @@
+# El Gegant del Pi
+title = El Gegant del Pi
+time = 4/4
+magnify = 1.8
+spacing = 1.5
+system-distance = 40
+system-distance-min = 32
+lyric-padding = 2.5
+lyric-distance = 14
+lyric-distance-min = 11
+
+melodia:
+e'8 f'8 g'4 e'4 c'4 |
+f'8 e'8 d'8 c'8 d'8 d'8 e'8 c'8 |
+e'8 f'8 g'4 e'4 c'4 |
+f'8 e'8 d'8 c'8 d'8 e'8 c'4 \bar "|."
