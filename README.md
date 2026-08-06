@@ -50,7 +50,7 @@ a partir de la carpeta `songs/`.
    ```
 
    A la melodia només cal escriure les notes planes (per exemple `e'8`, `g'4`,
-   `c''2.`) i els compassos (`|`). El programet hi afegeix automàticament els
+   `c''2.`) i els compassos (`|`). El programa hi afegeix automàticament els
    colors i els noms DO-RE-MI.
 
 2. Genera la partitura:
@@ -71,11 +71,11 @@ Per actualitzar-la, des de la carpeta del projecte:
 ./tools/publish.sh
 ```
 
-Aquest script genera les partitures, guarda els canvis a `main` i puja la web a
+Aquest script genera les partitures, desa els canvis a `main` i publica la web a
 la branca `gh-pages`. La primera vegada (o si canvies de configuració), revisa a
 GitHub:
 
-1. A **Settings → Pages → Build and deployment**, tria *Deploy from a branch*.
+1. A **Settings → Pages → Build and deployment**, selecciona *Deploy from a branch*.
 2. Selecciona la branca **gh-pages** i la carpeta **/ (root)**.
 3. La web queda publicada a `https://<usuari>.github.io/<repositori>/`.
 4. Per fer servir un domini propi: afegeix un fitxer `CNAME` amb el domini dins

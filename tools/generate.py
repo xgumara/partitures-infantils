@@ -6,7 +6,7 @@
   python3 generate.py songs/canço/canço.txt    # processa una cançó concreta
   python3 generate.py -o /tmp/prova songs/canço/canço.txt   # escriu la sortida en un altre directori
 
-Cada cançó viu en una carpeta dins de songs/ (per exemple songs/gegant-del-pi/)
+Cada cançó té una carpeta dins de songs/ (per exemple songs/gegant-del-pi/)
 amb el fitxer d'entrada .txt, el .ly generat (notes acolorides + noms DO-RE-MI)
 i el .pdf compilat amb lilypond. Aquesta carpeta és la web de GitHub Pages.
 Al final es regenera songs/index.html amb totes les cançons.
@@ -222,17 +222,18 @@ def generate_index():
             songs.append(d.name)
     cards = []
     for name in songs:
-        title = name.replace("-", " ").title()
+        spec = parse_spec(WEB / name / (name + ".txt"))
+        title = spec[0]["title"] or name.replace("-", " ").title()
         base = "%s/%s" % (name, name)
         ly_link = ('<a class="btn" href="%s.ly" download>Codi font (.ly)</a>'
                    % base) if (WEB / name / (name + ".ly")).exists() else ""
-        txt_link = ('<a class="btn" href="%s.txt" download>Font senzilla (.txt)</a>'
+        txt_link = ('<a class="btn" href="%s.txt" download>Fitxer d\'entrada (.txt)</a>'
                     % base) if (WEB / name / (name + ".txt")).exists() else ""
         cards.append(
             '      <article class="score">\n'
             '        <h2>%s</h2>\n'
             '        <div class="links">\n'
-            '          <a class="btn primary" href="%s.pdf" download>Baixa el PDF</a>\n'
+            '          <a class="btn primary" href="%s.pdf" download>Descarrega el PDF</a>\n'
             '          %s\n'
             '          %s\n'
             '        </div>\n'
@@ -267,7 +268,7 @@ def generate_index():
 <body>
   <header>
     <h1>Partitures</h1>
-    <p>Cançons infantils amb notes acolorides per a aprendre a tocar-les</p>
+    <p>Cançons infantils amb notes acolorides per aprendre a tocar-les</p>
   </header>
   <main>
 %s
