@@ -212,6 +212,29 @@ def generate(spec_path, out_dir=None):
         print("   ERROR: lilypond ha fallat", file=sys.stderr)
         print(e.stdout, file=sys.stderr)
         print(e.stderr, file=sys.stderr)
+    make_thumbnail(target, spec_path.stem)
+
+
+def make_thumbnail(target, stem):
+    png = target / (stem + ".png")
+    if png.exists():
+        png.unlink()
+    try:
+        subprocess.run(["lilypond", "--png", "-o", str(target / stem), str(target / (stem + ".ly"))],
+                       cwd=str(target), check=True,
+                       capture_output=True, text=True)
+        out = subprocess.check_output(["sips", "-g", "pixelHeight", "-g", "pixelWidth", str(png)])
+        h = int([l.split(":")[1].strip() for l in out.decode().splitlines() if "pixelHeight" in l][0])
+        w = int([l.split(":")[1].strip() for l in out.decode().splitlines() if "pixelWidth" in l][0])
+        crop_w = int(round(h * 4 / 3))
+        if crop_w <= w:
+            subprocess.run(["sips", "-c", str(h), str(crop_w), str(png)], check=True,
+                           capture_output=True, text=True)
+        subprocess.run(["sips", "-z", "360", "480", str(png)], check=True,
+                       capture_output=True, text=True)
+        print("   Thumbnail generat")
+    except subprocess.CalledProcessError:
+        print("   ERROR: thumbnail no generat", file=sys.stderr)
 
 
 def generate_index():
@@ -225,19 +248,16 @@ def generate_index():
         spec = parse_spec(WEB / name / (name + ".txt"))
         title = spec[0]["title"] or name.replace("-", " ").title()
         base = "%s/%s" % (name, name)
-        ly_link = ('<a class="btn" href="%s.ly" download>Codi font (.ly)</a>'
-                   % base) if (WEB / name / (name + ".ly")).exists() else ""
-        txt_link = ('<a class="btn" href="%s.txt" download>Fitxer d\'entrada (.txt)</a>'
-                    % base) if (WEB / name / (name + ".txt")).exists() else ""
+        img = ('<img class="thumb" src="%s.png" alt="Vista prèvia de %s">\n'
+               '        ' % (base, title)) if (WEB / name / (name + ".png")).exists() else ""
         cards.append(
             '      <article class="score">\n'
+            '        %s'
             '        <h2>%s</h2>\n'
             '        <div class="links">\n'
             '          <a class="btn primary" href="%s.pdf" download>Descarrega el PDF</a>\n'
-            '          %s\n'
-            '          %s\n'
             '        </div>\n'
-            '      </article>' % (title, base, ly_link, txt_link))
+            '      </article>' % (img, title, base))
     html = """<!DOCTYPE html>
 <html lang="ca">
 <head>
@@ -256,6 +276,8 @@ def generate_index():
            grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
     .score { background:#fff; border:1px solid #e3e1dc; border-radius:10px; padding:1.25rem; }
     .score h2 { margin:0 0 1rem; font-size:1.1rem; }
+    .thumb { width:100%%; aspect-ratio:4/3; object-fit:cover; border-radius:8px;
+             margin-bottom:.9rem; border:1px solid #e3e1dc; background:#f0efe9; }
     .links { display:flex; gap:.5rem; flex-wrap:wrap; }
     .btn { text-decoration:none; padding:.55rem .9rem; border-radius:8px;
            font-size:.9rem; border:1px solid #d8d5cf; color:var(--ink); }

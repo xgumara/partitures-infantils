@@ -12,7 +12,7 @@ fi
 
 git worktree add .gh-pages-tmp gh-pages
 rm -rf .gh-pages-tmp/*
-cp -R songs/. .gh-pages-tmp/
+rsync -a --exclude='*.ly' --exclude='*.txt' songs/ .gh-pages-tmp/
 git -C .gh-pages-tmp add -A
 if ! git -C .gh-pages-tmp diff --cached --quiet; then
   git -C .gh-pages-tmp commit -m "Publica la web"

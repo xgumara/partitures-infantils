@@ -17,13 +17,17 @@ a partir de la carpeta `songs/`.
 │   └── <cançó>/           # una carpeta per cada cançó
 │       ├── cançó.txt      # melodia en format senzill (entrada)
 │       ├── cançó.ly       # partitura LilyPond (generada)
-│       └── cançó.pdf      # PDF per imprimir (generat)
+│       ├── cançó.pdf      # PDF per imprimir (generat)
+│       └── cançó.png      # vista prèvia 4:3 (generada)
 ├── tools/
 │   ├── generate.py        # genera les partitures i l'índex web
 │   └── publish.sh         # publica la web a GitHub Pages
 ├── README.md
 └── TODO.md                # cançons pendents (ignorat per git)
 ```
+
+A la web només es publiquen el **PDF** i la **imatge de vista prèvia**: el `.ly` i
+el `.txt` es mantenen al repositori però no són descarregables des de la web.
 
 ## Requisits
 
@@ -59,8 +63,8 @@ a partir de la carpeta `songs/`.
    python3 tools/generate.py
    ```
 
-   Això crea el `.ly` i el `.pdf` a la carpeta de la cançó i actualitza
-   `songs/index.html`.
+   Això crea el `.ly`, el `.pdf` i la imatge de vista prèvia a la carpeta de la
+   cançó, i actualitza `songs/index.html`.
 
 ## Publicar a GitHub Pages
 
