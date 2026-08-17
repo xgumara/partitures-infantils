@@ -14,29 +14,18 @@ melodia = {
   \key c \major
   \time 3/4
   \override Stem.thickness = #2.5
-  \tweak color \solColor g'4. \tweak color \laColor a'8 \tweak color \solColor g'4 |
-  \tweak color \miColor e'2. |
-  \tweak color \solColor g'4. \tweak color \laColor a'8 \tweak color \solColor g'4 |
-  \tweak color \miColor e'2. |
-  \tweak color \reColor d''2 \tweak color \reColor d''4 |
-  \tweak color \siColor b'2. |
-  \tweak color \doColor c''2 \tweak color \doColor c''4 |
-  \tweak color \solColor g'2. |
-  \tweak color \laColor a'2 \tweak color \laColor a'4 |
-  \tweak color \doColor c'2. \tweak color \siColor b'8 \tweak color \laColor a'4 |
-  \tweak color \solColor g'2. |
-  \tweak color \miColor e'2. |
-  \tweak color \laColor a'2 \tweak color \laColor a'4 |
-  \tweak color \doColor c'4. \tweak color \siColor b'8 \tweak color \laColor a'2 |
-  \tweak color \solColor g'4. \tweak color \laColor a'8 \tweak color \solColor g'4 |
-  \tweak color \miColor e'2. |
-  \tweak color \reColor d''2 \tweak color \reColor d''4 |
-  \tweak color \faColor f''4. \tweak color \reColor d''8 \tweak color \siColor b'4 |
-  \tweak color \doColor c''2. |
-  \tweak color \miColor e''2. |
-  \tweak color \doColor c''4. \tweak color \solColor g'8 \tweak color \miColor e'4 |
-  \tweak color \solColor g'4. \tweak color \faColor f'8 \tweak color \reColor d'4 |
-  \tweak color \doColor c'2.
+  \tweak color \solColor g'4. \tweak color \laColor a'8 \tweak color \solColor g'4 \tweak color \miColor e'2.
+  \tweak color \solColor g'4. \tweak color \laColor a'8 \tweak color \solColor g'4 \tweak color \miColor e'2.
+  \tweak color \reColor d''2 \tweak color \reColor d''4 \tweak color \siColor b'2. \tweak color \doColor c''2
+  \tweak color \doColor c''4 \tweak color \solColor g'2. \tweak color \laColor a'2 \tweak color \laColor a'4
+  \tweak color \doColor c''2. \tweak color \siColor b'8 \tweak color \laColor a'4 \tweak color \solColor g'4.
+  \tweak color \laColor a'8 \tweak color \solColor g'2. \tweak color \miColor e'2. \tweak color \laColor a'2
+  \tweak color \laColor a'4 \tweak color \doColor c''4. \tweak color \siColor b'8 \tweak color \laColor a'2
+  \tweak color \solColor g'4. \tweak color \laColor a'8. \tweak color \solColor g'4 \tweak color \miColor e'2.
+  \tweak color \reColor d''2 \tweak color \reColor d''4 \tweak color \faColor f''4. \tweak color \reColor d''8
+  \tweak color \siColor b'4 \tweak color \doColor c''2. \tweak color \miColor e''2. \tweak color \doColor c''4.
+  \tweak color \solColor g'8 \tweak color \miColor e'4 \tweak color \solColor g'4. \tweak color \faColor f'8
+  \tweak color \reColor d'4 \tweak color \doColor c'2.~ \tweak color \doColor c'2.
   \bar "|."
 }
 
@@ -48,12 +37,13 @@ noms = \lyricmode {
   \tweak color \reColor "RE" \tweak color \reColor "RE" \tweak color \siColor "SI" \tweak color \doColor "DO"
   \tweak color \doColor "DO" \tweak color \solColor "SOL" \tweak color \laColor "LA" \tweak color \laColor "LA"
   \tweak color \doColor "DO" \tweak color \siColor "SI" \tweak color \laColor "LA" \tweak color \solColor "SOL"
-  \tweak color \miColor "MI" \tweak color \laColor "LA" \tweak color \laColor "LA" \tweak color \doColor "DO"
-  \tweak color \siColor "SI" \tweak color \laColor "LA" \tweak color \solColor "SOL" \tweak color \laColor "LA"
-  \tweak color \solColor "SOL" \tweak color \miColor "MI" \tweak color \reColor "RE" \tweak color \reColor "RE"
-  \tweak color \faColor "FA" \tweak color \reColor "RE" \tweak color \siColor "SI" \tweak color \doColor "DO"
-  \tweak color \miColor "MI" \tweak color \doColor "DO" \tweak color \solColor "SOL" \tweak color \miColor "MI"
-  \tweak color \solColor "SOL" \tweak color \faColor "FA" \tweak color \reColor "RE" \tweak color \doColor "DO"
+  \tweak color \laColor "LA" \tweak color \solColor "SOL" \tweak color \miColor "MI" \tweak color \laColor "LA"
+  \tweak color \laColor "LA" \tweak color \doColor "DO" \tweak color \siColor "SI" \tweak color \laColor "LA"
+  \tweak color \solColor "SOL" \tweak color \laColor "LA" \tweak color \solColor "SOL" \tweak color \miColor "MI"
+  \tweak color \reColor "RE" \tweak color \reColor "RE" \tweak color \faColor "FA" \tweak color \reColor "RE"
+  \tweak color \siColor "SI" \tweak color \doColor "DO" \tweak color \miColor "MI" \tweak color \doColor "DO"
+  \tweak color \solColor "SOL" \tweak color \miColor "MI" \tweak color \solColor "SOL" \tweak color \faColor "FA"
+  \tweak color \reColor "RE" \tweak color \doColor "DO" \tweak color \doColor "DO"
 }
 
 \header {
