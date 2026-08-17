@@ -23,11 +23,11 @@ melodia = {
   \tweak color \doColor c''2 \tweak color \doColor c''4 |
   \tweak color \solColor g'2. |
   \tweak color \laColor a'2 \tweak color \laColor a'4 |
-  \tweak color \doColor c'2 \tweak color \siColor b'8 \tweak color \laColor a'4 |
+  \tweak color \doColor c'2. \tweak color \siColor b'8 \tweak color \laColor a'4 |
   \tweak color \solColor g'2. |
   \tweak color \miColor e'2. |
   \tweak color \laColor a'2 \tweak color \laColor a'4 |
-  \tweak color \doColor c'4. \tweak color \siColor b'8 \tweak color \laColor a'4 |
+  \tweak color \doColor c'4. \tweak color \siColor b'8 \tweak color \laColor a'2 |
   \tweak color \solColor g'4. \tweak color \laColor a'8 \tweak color \solColor g'4 |
   \tweak color \miColor e'2. |
   \tweak color \reColor d''2 \tweak color \reColor d''4 |
