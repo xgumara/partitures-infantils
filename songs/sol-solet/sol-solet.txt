@@ -1,0 +1,20 @@
+# Sol Solet
+title = Sol Solet
+time = 2/4
+magnify = 1.8
+spacing = 1.5
+system-distance = 40
+system-distance-min = 32
+lyric-padding = 2.5
+lyric-distance = 14
+lyric-distance-min = 11
+
+melodia:
+g'4 a'4 |
+g'4 \tuplet 3/2 { g'8 a' g' } |
+f'8 f'8 \tuplet 3/2 { f'8 e' f' } |
+a'4 g'4 |
+g'4 a'4 |
+g'4 \tuplet 3/2 { g'8 a' g' } |
+f'8 f'8 g'8 g'8 |
+e'4 r4 \bar "|."
