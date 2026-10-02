@@ -47,6 +47,7 @@ DEFAULTS = {
     "key": "c \\major",
     "time": "4/4",
     "partial": None,
+    "level": "2",
     "magnify": "1.8",
     "spacing": "1.5",
     "system-distance": "40",
@@ -254,14 +255,16 @@ def make_thumbnail(target, stem):
 
 def generate_index():
     (WEB / ".nojekyll").touch(exist_ok=True)
-    songs = []
+    entries = []
     for d in sorted(p for p in WEB.iterdir() if p.is_dir()):
-        if (d / (d.name + ".pdf")).exists():
-            songs.append(d.name)
+        if not (d / (d.name + ".pdf")).exists():
+            continue
+        spec, _ = parse_spec(d / (d.name + ".txt"))
+        title = spec["title"] or d.name.replace("-", " ").title()
+        entries.append((int(spec["level"]), d.name, title))
+    entries.sort()
     cards = []
-    for name in songs:
-        spec = parse_spec(WEB / name / (name + ".txt"))
-        title = spec[0]["title"] or name.replace("-", " ").title()
+    for _, name, title in entries:
         base = "%s/%s" % (name, name)
         img = ('<img class="thumb" src="%s.png" alt="Vista prèvia de %s">\n'
                '        ' % (base, title)) if (WEB / name / (name + ".png")).exists() else ""

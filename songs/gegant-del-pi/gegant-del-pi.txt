@@ -1,5 +1,6 @@
 # El Gegant del Pi
 title = El Gegant del Pi
+level = 1
 time = 4/4
 magnify = 1.8
 spacing = 1.5

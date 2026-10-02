@@ -1,5 +1,6 @@
 # Sol Solet
 title = Sol Solet
+level = 1
 time = 2/4
 magnify = 1.8
 spacing = 1.5

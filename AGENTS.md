@@ -13,7 +13,7 @@ Web publicada: `https://xgumara.github.io/partitures-infantils/`
 - Publicar la web: `./tools/publish.sh` (commit a main + push de la branca `gh-pages`)
 
 ## Afegir una cançó
-1. Crear `songs/<cançó>/<cançó>.txt` amb: `title`, `time`, opcionals `partial`, `magnify`, `spacing`, `system-distance`, `lyric-padding`, i el bloc `melodia:` amb notes planes (ex. `e'8 f'8 g'4 c'4 |`) i barres `|`.
+1. Crear `songs/<cançó>/<cançó>.txt` amb: `title`, `time`, opcionals `partial`, `magnify`, `spacing`, `system-distance`, `lyric-padding`, `level` (1 = fàcil, 2 = difícil; ordena l'índex), i el bloc `melodia:` amb notes planes (ex. `e'8 f'8 g'4 c'4 |`) i barres `|`.
 2. `python3 tools/generate.py`
 3. `./tools/publish.sh`
 
