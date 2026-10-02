@@ -95,7 +95,9 @@ def build_melody(tokens):
         m = NOTE_RE.match(tok)
         if m:
             letter = m.group(1)
-            syllables.append(letter)
+            # c' és el do central: les octaves es mostren a partir d'aquí
+            octave = m.group(2).count("'") - 1
+            syllables.append(letter + ("'" * octave if octave >= 0 else "," * -octave))
             cur.append("\\tweak color \\%s %s" % (COLOR[letter], tok))
         else:
             cur.append(tok)
@@ -110,7 +112,7 @@ def build_noms(syllables):
     for i in range(0, len(syllables), 4):
         chunk = syllables[i:i + 4]
         lines.append("  " + " ".join(
-            '\\tweak color \\%s "%s"' % (COLOR[s], NOM[s]) for s in chunk))
+            '\\tweak color \\%s "%s%s"' % (COLOR[s[0]], NOM[s[0]], s[1:]) for s in chunk))
     return lines
 
 
@@ -203,7 +205,11 @@ def generate(spec_path, out_dir=None):
     noms_lines = build_noms(syllables)
     ly_path = target / (spec_path.stem + ".ly")
     ly_path.write_text(render_ly(spec, mel_lines, noms_lines))
-    print("-> %s" % ly_path.relative_to(BASE))
+    try:
+        shown = ly_path.relative_to(BASE)
+    except ValueError:
+        shown = ly_path
+    print("-> %s" % shown)
     try:
         subprocess.run(["lilypond", "--pdf", "-o", str(ly_path.with_suffix("")), str(ly_path)],
                        cwd=str(target), check=True,
@@ -224,6 +230,14 @@ def make_thumbnail(target, stem):
         subprocess.run(["lilypond", "--png", "-o", str(target / stem), str(target / (stem + ".ly"))],
                        cwd=str(target), check=True,
                        capture_output=True, text=True)
+        # lilypond crea <nom>-pageN.png si la partitura té més d'una pàgina
+        if not png.exists():
+            pages = sorted(target.glob(stem + "-page*.png"))
+            if not pages:
+                raise FileNotFoundError(str(png))
+            pages[0].rename(png)
+            for extra in pages[1:]:
+                extra.unlink()
         out = subprocess.check_output(["sips", "-g", "pixelHeight", "-g", "pixelWidth", str(png)])
         h = int([l.split(":")[1].strip() for l in out.decode().splitlines() if "pixelHeight" in l][0])
         w = int([l.split(":")[1].strip() for l in out.decode().splitlines() if "pixelWidth" in l][0])
@@ -234,7 +248,7 @@ def make_thumbnail(target, stem):
         subprocess.run(["sips", "-z", "360", "480", str(png)], check=True,
                        capture_output=True, text=True)
         print("   Thumbnail generat")
-    except subprocess.CalledProcessError:
+    except (subprocess.CalledProcessError, OSError):
         print("   ERROR: thumbnail no generat", file=sys.stderr)
 
 
