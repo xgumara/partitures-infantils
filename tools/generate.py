@@ -195,6 +195,7 @@ def render_ly(spec, melody_lines, noms_lines):
 
 
 def generate(spec_path, out_dir=None):
+    spec_path = Path(spec_path).resolve()
     target = Path(out_dir).resolve() if out_dir else spec_path.parent
     target.mkdir(parents=True, exist_ok=True)
     spec, melody = parse_spec(spec_path)
