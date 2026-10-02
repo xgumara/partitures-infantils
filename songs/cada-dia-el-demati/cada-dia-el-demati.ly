@@ -28,8 +28,7 @@ melodia = {
   |
   \tweak color \faColor f'8 \tweak color \faColor f'8 \tweak color \miColor e'8 \tweak color \miColor e'8
   |
-  \tweak color \miColor e'8 \tweak color \reColor d'8 \tweak color \doColor c'8 \tweak color \doColor c'8
-  |
+  \tweak color \reColor d'4 \tweak color \doColor c'8 \tweak color \doColor c'8 |
   \tweak color \solColor g'8 \tweak color \solColor g'8 \tweak color \laColor a'8 \tweak color \laColor a'8
   |
   \tweak color \solColor g'4 \tweak color \faColor f'8 \tweak color \faColor f'8 |
@@ -49,10 +48,10 @@ noms = \lyricmode {
   \tweak color \faColor "FA" \tweak color \faColor "FA" \tweak color \miColor "MI" \tweak color \miColor "MI"
   \tweak color \miColor "MI" \tweak color \reColor "RE" \tweak color \solColor "SOL" \tweak color \solColor "SOL"
   \tweak color \faColor "FA" \tweak color \faColor "FA" \tweak color \miColor "MI" \tweak color \miColor "MI"
-  \tweak color \miColor "MI" \tweak color \reColor "RE" \tweak color \doColor "DO" \tweak color \doColor "DO"
-  \tweak color \solColor "SOL" \tweak color \solColor "SOL" \tweak color \laColor "LA" \tweak color \laColor "LA"
-  \tweak color \solColor "SOL" \tweak color \faColor "FA" \tweak color \faColor "FA" \tweak color \miColor "MI"
-  \tweak color \miColor "MI" \tweak color \reColor "RE" \tweak color \reColor "RE" \tweak color \doColor "DO"
+  \tweak color \reColor "RE" \tweak color \doColor "DO" \tweak color \doColor "DO" \tweak color \solColor "SOL"
+  \tweak color \solColor "SOL" \tweak color \laColor "LA" \tweak color \laColor "LA" \tweak color \solColor "SOL"
+  \tweak color \faColor "FA" \tweak color \faColor "FA" \tweak color \miColor "MI" \tweak color \miColor "MI"
+  \tweak color \reColor "RE" \tweak color \reColor "RE" \tweak color \doColor "DO"
 }
 
 \header {
