@@ -14,35 +14,36 @@ melodia = {
   \key c \major
   \time 2/4
   \override Stem.thickness = #2.5
-  \tweak color \solColor g'8 \tweak color \solColor g'8 \tweak color \solColor g'8 \tweak color \solColor g'8
+  r4 r8 \tweak color \solColor g'8 |
+  \tweak color \solColor g'16 \tweak color \laColor a'16 \tweak color \solColor g'16 \tweak color \faColor f'16
+  \tweak color \miColor e'8 \tweak color \faColor f'8 |
+  \tweak color \solColor g'16 \tweak color \laColor a'16 \tweak color \solColor g'16 \tweak color \faColor f'16
+  \tweak color \miColor e'8 \tweak color \faColor f'8 |
+  \tweak color \laColor a'8 \tweak color \laColor a'8 \tweak color \faColor f'8. \tweak color \miColor e'16
   |
-  \tweak color \faColor f'8 \tweak color \faColor f'8 \tweak color \solColor g'8 \tweak color \solColor g'8
+  \tweak color \miColor e'4. \tweak color \solColor g'8 |
+  \tweak color \faColor f'16 \tweak color \solColor g'16 \tweak color \faColor f'16 \tweak color \miColor e'16
+  \tweak color \reColor d'8 \tweak color \solColor g'8 |
+  \tweak color \faColor f'16 \tweak color \solColor g'16 \tweak color \faColor f'16 \tweak color \miColor e'16
+  \tweak color \reColor d'8 \tweak color \solColor g'8 |
+  \tweak color \solColor g'8 \tweak color \solColor g'8 \tweak color \miColor e'8. \tweak color \reColor d'16
   |
-  \tweak color \miColor e'8 \tweak color \miColor e'8 \tweak color \faColor f'8 \tweak color \faColor f'8
-  |
-  \tweak color \solColor g'4 r8 \tweak color \solColor g'8 |
-  \tweak color \doColor c''8 \tweak color \doColor c''8 \tweak color \laColor a'8 \tweak color \laColor a'8
-  |
-  \tweak color \solColor g'4 r8 \tweak color \solColor g'8 |
-  \tweak color \faColor f'8 \tweak color \faColor f'8 \tweak color \reColor d'8 \tweak color \reColor d'8
-  |
-  \tweak color \miColor e'8 \tweak color \miColor e'8 \tweak color \doColor c'8 \tweak color \doColor c'8
-  |
-  \tweak color \reColor d'8 \tweak color \reColor d'8 \tweak color \doColor c'4
+  \tweak color \doColor c'4 r4
   \bar "|."
 }
 
 noms = \lyricmode {
   \override LyricText.font-size = #4
   \override LyricText.font-series = #'bold
-  \tweak color \solColor "SOL" \tweak color \solColor "SOL" \tweak color \solColor "SOL" \tweak color \solColor "SOL"
-  \tweak color \faColor "FA" \tweak color \faColor "FA" \tweak color \solColor "SOL" \tweak color \solColor "SOL"
-  \tweak color \miColor "MI" \tweak color \miColor "MI" \tweak color \faColor "FA" \tweak color \faColor "FA"
-  \tweak color \solColor "SOL" \tweak color \solColor "SOL" \tweak color \doColor "DO'" \tweak color \doColor "DO'"
-  \tweak color \laColor "LA" \tweak color \laColor "LA" \tweak color \solColor "SOL" \tweak color \solColor "SOL"
-  \tweak color \faColor "FA" \tweak color \faColor "FA" \tweak color \reColor "RE" \tweak color \reColor "RE"
-  \tweak color \miColor "MI" \tweak color \miColor "MI" \tweak color \doColor "DO" \tweak color \doColor "DO"
-  \tweak color \reColor "RE" \tweak color \reColor "RE" \tweak color \doColor "DO"
+  \tweak color \solColor "SOL" \tweak color \solColor "SOL" \tweak color \laColor "LA" \tweak color \solColor "SOL"
+  \tweak color \faColor "FA" \tweak color \miColor "MI" \tweak color \faColor "FA" \tweak color \solColor "SOL"
+  \tweak color \laColor "LA" \tweak color \solColor "SOL" \tweak color \faColor "FA" \tweak color \miColor "MI"
+  \tweak color \faColor "FA" \tweak color \laColor "LA" \tweak color \laColor "LA" \tweak color \faColor "FA"
+  \tweak color \miColor "MI" \tweak color \miColor "MI" \tweak color \solColor "SOL" \tweak color \faColor "FA"
+  \tweak color \solColor "SOL" \tweak color \faColor "FA" \tweak color \miColor "MI" \tweak color \reColor "RE"
+  \tweak color \solColor "SOL" \tweak color \faColor "FA" \tweak color \solColor "SOL" \tweak color \faColor "FA"
+  \tweak color \miColor "MI" \tweak color \reColor "RE" \tweak color \solColor "SOL" \tweak color \solColor "SOL"
+  \tweak color \solColor "SOL" \tweak color \miColor "MI" \tweak color \reColor "RE" \tweak color \doColor "DO"
 }
 
 \header {
