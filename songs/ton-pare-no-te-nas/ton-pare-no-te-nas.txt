@@ -1,0 +1,22 @@
+# Ton pare no té nas
+title = Ton pare no té nas
+level = 1
+time = 2/4
+magnify = 1.8
+spacing = 1.5
+system-distance = 40
+system-distance-min = 32
+lyric-padding = 2.5
+lyric-distance = 14
+lyric-distance-min = 11
+
+melodia:
+g'8 g'8 g'8 g'8 |
+f'8 f'8 g'8 g'8 |
+e'8 e'8 f'8 f'8 |
+g'4 r8 g'8 |
+c''8 c''8 a'8 a'8 |
+g'4 r8 g'8 |
+f'8 f'8 d'8 d'8 |
+e'8 e'8 c'8 c'8 |
+d'8 d'8 c'4 \bar "|."
