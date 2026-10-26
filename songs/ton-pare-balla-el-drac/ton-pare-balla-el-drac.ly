@@ -16,21 +16,31 @@ melodia = {
   \override Stem.thickness = #2.5
 
   \partial 8
-  \tweak color \faColor f'8 |
+  \tweak color \solColor g'8 |
   \tweak color \doColor c''16 \tweak color \reColor d''16 \tweak color \doColor c''16 \tweak color \siColor b'16
-  \tweak color \doColor c''8 \tweak color \faColor f'8 |
+  \tweak color \doColor c''8 \tweak color \solColor g'8 |
   \tweak color \doColor c''16 \tweak color \reColor d''16 \tweak color \doColor c''16 \tweak color \siColor b'16
   \tweak color \doColor c''8 \tweak color \miColor e''8 |
-  \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8 \tweak color \solColor g'8
+  \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8 \tweak color \laColor a'8
   |
-  \tweak color \solColor g'8. \tweak color \faColor f'16 \tweak color \faColor f'8 \tweak color \faColor f'8
+  \tweak color \laColor a'8. \tweak color \solColor g'16 \tweak color \solColor g'8 \tweak color \solColor g'8
   |
+  \tweak color \doColor c''16 \tweak color \reColor d''16 \tweak color \doColor c''16 \tweak color \siColor b'16
+  \tweak color \doColor c''8 \tweak color \solColor g'8 |
+  \tweak color \doColor c''16 \tweak color \reColor d''16 \tweak color \doColor c''16 \tweak color \siColor b'16
+  \tweak color \doColor c''8 \tweak color \miColor e''8 |
   \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8 \tweak color \reColor d''8
   |
-  \tweak color \doColor c''4. |
-  \tweak color \miColor e''8 \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8
-  \tweak color \laColor a'8 |
-  \tweak color \laColor a'4 \tweak color \faColor f'8 \tweak color \miColor e''8 |
+  \tweak color \doColor c''4. \tweak color \miColor e''8 |
+  \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8 \tweak color \laColor a'8
+  |
+  \tweak color \laColor a'4 \tweak color \solColor g'8 \tweak color \miColor e''8 |
+  \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8 \tweak color \reColor d''8
+  |
+  \tweak color \doColor c''4. \tweak color \miColor e''8 |
+  \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8 \tweak color \laColor a'8
+  |
+  \tweak color \laColor a'4 \tweak color \solColor g'8 \tweak color \miColor e''8 |
   \tweak color \reColor d''8. \tweak color \doColor c''16 \tweak color \siColor b'8 \tweak color \reColor d''8
   |
   \tweak color \doColor c''4.
@@ -40,16 +50,22 @@ melodia = {
 noms = \lyricmode {
   \override LyricText.font-size = #4
   \override LyricText.font-series = #'bold
-  \tweak color \faColor "FA" \tweak color \doColor "DO'" \tweak color \reColor "RE'" \tweak color \doColor "DO'"
-  \tweak color \siColor "SI" \tweak color \doColor "DO'" \tweak color \faColor "FA" \tweak color \doColor "DO'"
+  \tweak color \solColor "SOL" \tweak color \doColor "DO'" \tweak color \reColor "RE'" \tweak color \doColor "DO'"
+  \tweak color \siColor "SI" \tweak color \doColor "DO'" \tweak color \solColor "SOL" \tweak color \doColor "DO'"
   \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \siColor "SI" \tweak color \doColor "DO'"
   \tweak color \miColor "MI'" \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \siColor "SI"
-  \tweak color \solColor "SOL" \tweak color \solColor "SOL" \tweak color \faColor "FA" \tweak color \faColor "FA"
-  \tweak color \faColor "FA" \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \siColor "SI"
+  \tweak color \laColor "LA" \tweak color \laColor "LA" \tweak color \solColor "SOL" \tweak color \solColor "SOL"
+  \tweak color \solColor "SOL" \tweak color \doColor "DO'" \tweak color \reColor "RE'" \tweak color \doColor "DO'"
+  \tweak color \siColor "SI" \tweak color \doColor "DO'" \tweak color \solColor "SOL" \tweak color \doColor "DO'"
+  \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \siColor "SI" \tweak color \doColor "DO'"
+  \tweak color \miColor "MI'" \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \siColor "SI"
   \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \miColor "MI'" \tweak color \reColor "RE'"
   \tweak color \doColor "DO'" \tweak color \siColor "SI" \tweak color \laColor "LA" \tweak color \laColor "LA"
-  \tweak color \faColor "FA" \tweak color \miColor "MI'" \tweak color \reColor "RE'" \tweak color \doColor "DO'"
-  \tweak color \siColor "SI" \tweak color \reColor "RE'" \tweak color \doColor "DO'"
+  \tweak color \solColor "SOL" \tweak color \miColor "MI'" \tweak color \reColor "RE'" \tweak color \doColor "DO'"
+  \tweak color \siColor "SI" \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \miColor "MI'"
+  \tweak color \reColor "RE'" \tweak color \doColor "DO'" \tweak color \siColor "SI" \tweak color \laColor "LA"
+  \tweak color \laColor "LA" \tweak color \solColor "SOL" \tweak color \miColor "MI'" \tweak color \reColor "RE'"
+  \tweak color \doColor "DO'" \tweak color \siColor "SI" \tweak color \reColor "RE'" \tweak color \doColor "DO'"
 }
 
 \header {
@@ -66,8 +82,8 @@ noms = \lyricmode {
   ragged-last-bottom = ##t
   markup-system-spacing.basic-distance = 16
   markup-system-spacing.minimum-distance = 12
-  system-system-spacing.basic-distance = 40
-  system-system-spacing.minimum-distance = 32
+  system-system-spacing.basic-distance = 30
+  system-system-spacing.minimum-distance = 24
 }
 
 \score {
@@ -88,9 +104,9 @@ noms = \lyricmode {
     }
     \context {
       \Lyrics
-      \override LyricText.padding = #2.5
-      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.basic-distance = #14
-      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.minimum-distance = #11
+      \override LyricText.padding = #2.0
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.basic-distance = #11
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.minimum-distance = #9
     }
   }
 }

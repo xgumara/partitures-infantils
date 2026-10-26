@@ -5,21 +5,27 @@ time = 2/4
 partial = 8
 magnify = 1.8
 spacing = 1.5
-system-distance = 40
-system-distance-min = 32
-lyric-padding = 2.5
-lyric-distance = 14
-lyric-distance-min = 11
+system-distance = 30
+system-distance-min = 24
+lyric-padding = 2.0
+lyric-distance = 11
+lyric-distance-min = 9
 
 melodia:
-f'8 |
-c''16 d''16 c''16 b'16 c''8 f'8 |
+g'8 |
+c''16 d''16 c''16 b'16 c''8 g'8 |
 c''16 d''16 c''16 b'16 c''8 e''8 |
-d''8. c''16 b'8 g'8 |
-g'8. f'16 f'8 f'8 |
+d''8. c''16 b'8 a'8 |
+a'8. g'16 g'8 g'8 |
+c''16 d''16 c''16 b'16 c''8 g'8 |
+c''16 d''16 c''16 b'16 c''8 e''8 |
 d''8. c''16 b'8 d''8 |
-c''4. |
-e''8 d''8. c''16 b'8 a'8 |
-a'4 f'8 e''8 |
+c''4. e''8 |
+d''8. c''16 b'8 a'8 |
+a'4 g'8 e''8 |
+d''8. c''16 b'8 d''8 |
+c''4. e''8 |
+d''8. c''16 b'8 a'8 |
+a'4 g'8 e''8 |
 d''8. c''16 b'8 d''8 |
 c''4. \bar "|."
